@@ -30,13 +30,7 @@ function App() {
           <h2 className="content__title">Все пиццы</h2>
           <div className="content__items">
             {BD.map((obj) => (
-              <PizzaBlock
-                title={obj.name}
-                image={obj.imageUrl}
-                price={obj.price}
-                sizes={obj.sizes}
-                type={obj.types}
-              />
+              <PizzaBlock key={obj.id} {...obj} />
             ))}
             {/* {PizzaBlock({
               title: "ШефБургер",
